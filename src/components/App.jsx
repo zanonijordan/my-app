@@ -8,7 +8,9 @@ function App() {
     return (
         <div>
             <Header/> 
+            <React.StrictMode>
             {notes.map(note => {return (<Note key={note.key} title={note.title} content={note.content}/>)})}
+            </React.StrictMode>
             <Footer/>
         </div>
     )
